@@ -1,7 +1,9 @@
 
 const page = () => {
   return (
-    <div>Hello World!</div>
+    <div>
+        <h1>PDF Reader</h1>
+    </div>
   )
 }
 
