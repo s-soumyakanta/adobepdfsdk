@@ -20,13 +20,13 @@ const page = () => {
             <button onClick={() => adobeFilePreview.onFalse()}>Close</button>
           </div>
         </div>
-        <AdobeFilePreviewDialog
+        {/* <AdobeFilePreviewDialog
           onClose={adobeFilePreview.onFalse}
           open={adobeFilePreview.value}
           fileUrl={fileUrl}
           fileName="Test file"
-        />
-         {/* <AdobePdfViewer pdfUrl={fileUrl} fileName="Test File" />  */}
+        /> */}
+         <AdobePdfViewer pdfUrl={fileUrl} fileName="Test File" /> 
       </div>
     </>
   );
