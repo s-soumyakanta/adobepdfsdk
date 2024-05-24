@@ -21,7 +21,7 @@ const page = () => {
         </div>
         <AdobeFilePreviewDialog
           onClose={adobeFilePreview.onFalse}
-          open={adobeFilePreview.value}
+          open={true}
           fileUrl={fileUrl}
           fileName="Test file"
         />
