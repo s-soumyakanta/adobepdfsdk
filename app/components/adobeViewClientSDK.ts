@@ -23,7 +23,7 @@ class ViewSDKClient {
     previewFile(divId: string | undefined, viewerConfig: any): Promise<any> {
       const config: any = {
         /* Pass your registered client id */
-        clientId: process.env.NEXT_PUBLIC_ADOBE_PDF_SDK_API_KEY,
+        clientId: process.env.NEXT_PUBLIC_ADOBE_CLIENT_ID as string,
       };
       if (divId) { /* Optional only for Light Box embed mode */
         /* Pass the div id in which PDF should be rendered */
@@ -38,7 +38,7 @@ class ViewSDKClient {
         content: {
           /* Location of file where it is hosted */
           location: {
-            url: "https://acrobatservices.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf",
+            url: "https://dbegkrglt48mx.cloudfront.net/cms_documents/03052024.pdf",
             /*
             If the file URL requires some additional headers, then it can be passed as follows:-
             headers: [
@@ -66,7 +66,7 @@ class ViewSDKClient {
       /* Initialize the AdobeDC View object */
       this.adobeDCView = new (window as any).AdobeDC.View({
         /* Pass your registered client id */
-        clientId: process.env.NEXT_PUBLIC_ADOBE_PDF_SDK_API_KEY,
+        clientId: process.env.NEXT_PUBLIC_ADOBE_CLIENT_ID as string,
         /* Pass the div id in which PDF should be rendered */
         divId,
       });
@@ -130,4 +130,3 @@ class ViewSDKClient {
   }
   
   export default ViewSDKClient;
-  
