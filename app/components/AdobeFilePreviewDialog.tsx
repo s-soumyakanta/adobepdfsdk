@@ -8,8 +8,8 @@ import AdobePdfViewer from './AdobePdfViewer';
 
 type Props = DrawerProps & {
   fileUrl: string;
-  onClose: VoidFunction;
-  open: boolean;
+  onClose?: VoidFunction;
+  open?: boolean;
   fileName:string;
 };
 

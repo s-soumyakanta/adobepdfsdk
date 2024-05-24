@@ -1,6 +1,7 @@
 "use client";
 
 import AdobeFilePreviewDialog from "../components/AdobeFilePreviewDialog";
+import AdobePdfViewer from "../components/AdobePdfViewer";
 import { useBoolean } from "../hooks/use-boolean";
 
 const page = () => {
@@ -14,17 +15,18 @@ const page = () => {
           <div>
             <h1>Adobe PDF Viwer</h1>
           </div>
-          <div>
+          {/* <div>
             <button onClick={() => adobeFilePreview.onTrue()}>Open</button>
             <button onClick={() => adobeFilePreview.onFalse()}>Close</button>
-          </div>
+          </div> */}
         </div>
-        <AdobeFilePreviewDialog
+        {/* <AdobeFilePreviewDialog
           onClose={adobeFilePreview.onFalse}
           open={true}
           fileUrl={fileUrl}
           fileName="Test file"
-        />
+        /> */}
+         <AdobePdfViewer pdfUrl={fileUrl} fileName="Test File" /> 
       </div>
     </>
   );
